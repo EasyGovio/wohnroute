@@ -130,6 +130,23 @@ h2.section-title { color:#E67E22; font-size:1.1rem; margin:26px 0 12px; text-ali
   });
 })();
 </script>
+    <style id="viewportLock">html,body{overscroll-behavior:none;}</style>
+<script>
+(function(){
+  function lockCanvases(){
+    document.querySelectorAll('canvas').forEach(function(c){
+      c.style.touchAction = 'none';
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', lockCanvases);
+  } else {
+    lockCanvases();
+  }
+  var mo = new MutationObserver(lockCanvases);
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 </head>
 <body>
 <!--
