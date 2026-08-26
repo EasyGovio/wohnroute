@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pacdi-20260826-124126';
+const CACHE_NAME = 'pacdi-20260826-194159';
 const ASSETS = ['./'];
 self.addEventListener('install', e => {
   self.skipWaiting();
